@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instagram Follow Checker - Find out who's not following you back instantly">
+  <meta name="keywords" content="instagram, followers, checker, not following back">
+  <meta name="author" content="Instagram Follow Checker">
+  <meta property="og:title" content="Instagram Follow Checker">
+  <meta property="og:description" content="Find out who's not following you back on Instagram">
+  <meta property="og:type" content="website">
+  <title>Instagram Follow Checker | Find Who's Not Following You</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="rainCanvas"></canvas>
+  <div id="cursorGlow"></div>
+
+  <header id="navbar">
+    <div class="container">
+      <nav class="nav-content">
+        <div class="logo-section">
+          <div class="logo-icon">
+            <i class="fas fa-instagram"></i>
+          </div>
+          <span class="logo-text">IG Checker</span>
+        </div>
+
+        <div class="nav-links">
+          <button class="nav-link active" data-section="home">Home</button>
+          <button class="nav-link" data-section="how">How to Use</button>
+          <button class="nav-link" data-section="checker">Checker</button>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+          <button class="mobile-nav-link" data-section="home">Home</button>
+          <button class="mobile-nav-link" data-section="how">How to Use</button>
+          <button class="mobile-nav-link" data-section="checker">Checker</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-bg">
+      <div class="bg-element bg-element-1"></div>
+      <div class="bg-element bg-element-2"></div>
+      <div class="bg-element bg-element-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-star"></i>
+          <span id="typedText">Instagram Follow Checker</span>
+          <span class="cursor">|</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-blox">FIND</span>
+          <span class="title-tools">UNFOLLOWERS</span>
+        </h1>
+
+        <p class="hero-description">
+          Instantly discover who's not following you back on Instagram. Fast, accurate, and completely private.
+        </p>
+
+        <button class="hero-btn" data-section="checker">
+          <span class="btn-shimmer"></span>
+          <span class="btn-content">
+            Start Checking
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="tools-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-white">How to </span>
+          <span class="title-purple">Use</span>
+        </h2>
+        <p class="section-subtitle">3 Simple Steps to Find Who's Not Following You Back</p>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card featured">
+          <div class="card-glow"></div>
+          <div class="card-border"></div>
+          <div class="popular-badge">⭐ Step 1</div>
+          <div class="card-content">
+            <div class="card-header">
+              <div class="card-icon"><i class="fas fa-download"></i></div>
+              <div class="card-title-section">
+                <h3 class="card-title">Download Data</h3>
+                <span class="card-subtitle">From Instagram Settings</span>
+              </div>
+            </div>
+            <p class="card-description">Go to your Instagram Settings → Download your Information. Select JSON format and download the file.</p>
+            <div class="card-features">
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Takes 2-3 minutes</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>No technical skills needed</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>100% secure & private</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-card">
+          <div class="card-glow"></div>
+          <div class="card-border"></div>
+          <div class="popular-badge">⭐ Step 2</div>
+          <div class="card-content">
+            <div class="card-header">
+              <div class="card-icon"><i class="fas fa-upload"></i></div>
+              <div class="card-title-section">
+                <h3 class="card-title">Upload Files</h3>
+                <span class="card-subtitle">Select Your JSON Files</span>
+              </div>
+            </div>
+            <p class="card-description">Upload your followers_1.json and following.json files. We process everything locally on your device.</p>
+            <div class="card-features">
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>No data stored</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Instant upload</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Works offline</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool-card">
+          <div class="card-glow"></div>
+          <div class="card-border"></div>
+          <div class="popular-badge">⭐ Step 3</div>
+          <div class="card-content">
+            <div class="card-header">
+              <div class="card-icon"><i class="fas fa-magic"></i></div>
+              <div class="card-title-section">
+                <h3 class="card-title">Get Results</h3>
+                <span class="card-subtitle">See Your Unfollowers</span>
+              </div>
+            </div>
+            <p class="card-description">Instantly see the complete list of people not following you back. Copy and manage your list easily.</p>
+            <div class="card-features">
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Instant results</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Copy to clipboard</span>
+              </div>
+              <div class="feature">
+                <div class="feature-icon"><i class="fas fa-check"></i></div><span>Full accuracy</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="checker" class="contact-section">
+    <div class="contact-bg">
+      <div class="bg-element bg-element-4"></div>
+      <div class="bg-element bg-element-5"></div>
+    </div>
+
+    <div class="container">
+      <div class="contact-content">
+        <h2 class="section-title">
+          <span class="title-white">Check Your </span>
+          <span class="title-purple">Followers</span>
+        </h2>
+        <p class="section-subtitle">Upload your Instagram data files below</p>
+
+        <div class="checker-box">
+          <div class="file-input-group">
+            <label for="followersFile" class="file-label">
+              <input type="file" id="followersFile" accept=".json" required>
+              <i class="fas fa-file"></i>
+              <span>Upload followers_1.json</span>
+            </label>
+          </div>
+          
+          <div class="file-input-group">
+            <label for="followingFile" class="file-label">
+              <input type="file" id="followingFile" accept=".json" required>
+              <i class="fas fa-file"></i>
+              <span>Upload following.json</span>
+            </label>
+          </div>
+
+          <button id="checkBtn" type="button" class="contact-btn primary">
+            <span class="btn-shimmer"></span>
+            <span class="btn-content">Check Now</span>
+          </button>
+          
+          <div id="loading" class="loading hidden">
+            <p>Analyzing your data...</p>
+          </div>
+          <div id="error" class="error hidden"></div>
+        </div>
+
+        <section id="results" class="results-section hidden"></section>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Instagram Follow Checker | Made with
+        <span class="heart">❤️</span>
+        | <a href="#">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
